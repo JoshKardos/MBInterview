@@ -1,0 +1,88 @@
+.container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: grey;
+
+}
+.title {
+  text-align: center;
+  font-family: arial, sans-serif;
+}
+.photos {
+  max-height: 400px;
+  overflow: auto;
+  border: 1px dotted #ddd;
+  background-color: white;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  margin-bottom: 12px;
+}
+.photosHeaderCell {
+  padding: 4px;
+  width: 400px;
+
+}
+.photosCell{
+  border: 1px dotted #ddd;
+  padding: 4px;
+  width: 400px;
+}
+.buttons {
+  margin: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.photosHeader {
+  position: fixed;
+  cursor: pointer;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: center;
+  background-color: grey;
+  color: white;
+}
+button {
+  cursor: pointer;
+}
+.buttons button {
+  padding: 12px;
+  margin: 10px;
+}
+.filterDropdown th {
+  float: left;
+  margin-left: 24px;
+
+}
+.clearFiltersButton {
+  float: left;
+}
+.search {
+  border-radius: 4px;
+  height: 16px;
+  padding: 12px;
+  font-size: 24px;
+  align-self: center;
+  width: 40%;
+  margin-bottom: 12px;
+}
+.filterButtons {
+  margin-right: 4px;
+}
+.filterDropdown {
+  padding-bottom: 10px;
+  padding-top: 8px;
+  padding-left: 12px;
+  background-color: white;
+  color: grey;
+  border-radius: 8px;
+  height: 140px;
+  overflow: auto;
+  align-self: center;
+}
