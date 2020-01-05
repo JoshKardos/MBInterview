@@ -13,7 +13,7 @@ class App extends Component {
       ascending: true,
       sortedByKey: '',
       searchText: '',
-      numPhotosShowing: 75,
+      numPhotosShowing: 0,
       albumsFiltered: new Set()
     }
     this.search = null
@@ -67,6 +67,7 @@ class App extends Component {
       }
     }
   }
+  
   compare(key, a, b) {
     if (a[key] > b[key]) //sort string ascending
       return -1
@@ -169,7 +170,7 @@ class App extends Component {
   renderTableHeader() {
     const keys = ['albumId', 'albumTitle', 'title', 'photo']
     return keys.map((key, index) => {
-      return <th className='photosHeaderCell' onClick={() => this.sort(key)} key={index}>{key.toUpperCase()} {this.shouldShowSortDirection(key)} </th>
+      return <th className='photosCell' onClick={() => this.sort(key)} key={index}>{key.toUpperCase()} {this.shouldShowSortDirection(key)} </th>
     })
   }
 
@@ -203,8 +204,8 @@ class App extends Component {
           <button disabled={this.state.numPhotosShowing <= 0 } onClick={() => this.addPhotos(-25)}>Remove 25</button>
         </div>
         <table className='photos'>
-            <tr className='photosHeader'>{this.renderTableHeader()}</tr>
-            {this.renderTableData()}
+          <tr className='photosHeader'>{this.renderTableHeader()}</tr>
+          {this.renderTableData()}
         </table>
       </div>
     );

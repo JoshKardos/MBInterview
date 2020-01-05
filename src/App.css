@@ -1,5 +1,6 @@
 .container {
   position: absolute;
+  overflow: auto;
   height: 100%;
   width: 100%;
   display: flex;
@@ -12,26 +13,17 @@
   font-family: arial, sans-serif;
 }
 .photos {
-  max-height: 400px;
+  display: table;
   overflow: auto;
-  border: 1px dotted #ddd;
-  background-color: white;
-  display: flex;
-  align-self: center;
-  flex-direction: column;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: 12px;
   text-align: center;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  margin-bottom: 12px;
-}
-.photosHeaderCell {
-  padding: 4px;
-  width: 400px;
-
 }
 .photosCell{
   border: 1px dotted #ddd;
   padding: 4px;
-  width: 400px;
 }
 .buttons {
   margin: 12px;
@@ -40,10 +32,7 @@
   justify-content: center;
 }
 .photosHeader {
-  position: fixed;
   cursor: pointer;
-  padding-top: 8px;
-  padding-bottom: 8px;
   text-align: center;
   background-color: grey;
   color: white;
@@ -69,6 +58,7 @@ button {
   padding: 12px;
   font-size: 24px;
   align-self: center;
+  text-align: center;
   width: 40%;
   margin-bottom: 12px;
 }
@@ -82,7 +72,8 @@ button {
   background-color: white;
   color: grey;
   border-radius: 8px;
-  height: 140px;
+  min-height: 90px;
+  max-height: 120px;
   overflow: auto;
   align-self: center;
 }
