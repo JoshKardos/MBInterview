@@ -13,7 +13,7 @@ class App extends Component {
       ascending: true,
       sortedByKey: '',
       searchText: '',
-      numPhotosShowing: 0,
+      numPhotosShowing: 25,
       albumsFiltered: new Set()
     }
     this.search = null
@@ -193,7 +193,14 @@ class App extends Component {
   }
 
   render() {
-    const { numPhotosShowing } = this.state
+    const { numPhotosShowing, albums, allPhotos } = this.state
+    if (albums.length === 0 || !allPhotos.length === 0) {
+      return (
+        <div className='container'>
+          <p className='loading'>Loading...</p>
+        </div>
+      )
+    }
     return (
       <div className='container'>
         <h1 className='title'>Photos Table (showing {numPhotosShowing})</h1>
